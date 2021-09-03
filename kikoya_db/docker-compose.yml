@@ -5,11 +5,12 @@ services:
         image: postgres:latest
         container_name: postgres-kikoya
         environment:
+            POSTGRES_USER: kikoyo_user
             POSTGRES_DB: kikoya_db
             POSTGRES_PASSWORD: kikoya_!!!
         ports:
             - "5432:5432"
         restart: always
         volumes:  
-                - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+                - ./dump.sql:/docker-entrypoint-initdb.d/kikoya.sql
 
