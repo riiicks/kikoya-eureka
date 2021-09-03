@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "3ee0b0eb-9aa7-4bdc-ad56-6b8115b07c57",
+		"name": "kikoya",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registro unsecured/registro",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"riiicks1\",\r\n    \"username\":\"ricks1\",\r\n    \"email\":\"test1@test.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8762/kikoya-services/unsecured/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"kikoya-services",
+						"unsecured",
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login /login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"ricks1\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8762/kikoya-services/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"kikoya-services",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/user/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzA2NTQxNjUsImlzcyI6InRoZV9ib3NzX3JpY2tzIiwic3ViIjoiMiIsImV4cCI6MTYzMDY1Nzc2NX0.45hjzueGpAQ4oGar0H9BwWdv0I5g9cO05FaoOawjaKWozAgXBDrRFdxa5lhtFo2YZy8Cco3F_81NGfmRv04p0A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Roberto\",\r\n    \"username\":\"robert\",\r\n    \"email\":\"robert@robert.com\",\r\n    \"password\":\"987654321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/user/edit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzA2NTQxNjUsImlzcyI6InRoZV9ib3NzX3JpY2tzIiwic3ViIjoiMiIsImV4cCI6MTYzMDY1Nzc2NX0.45hjzueGpAQ4oGar0H9BwWdv0I5g9cO05FaoOawjaKWozAgXBDrRFdxa5lhtFo2YZy8Cco3F_81NGfmRv04p0A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"RobertA\",\r\n    \"username\":\"robertA\",\r\n    \"email\":\"test@robert.com\",\r\n    \"userId\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/user/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"user",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/user/findById/4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzA2NTQxNjUsImlzcyI6InRoZV9ib3NzX3JpY2tzIiwic3ViIjoiMiIsImV4cCI6MTYzMDY1Nzc2NX0.45hjzueGpAQ4oGar0H9BwWdv0I5g9cO05FaoOawjaKWozAgXBDrRFdxa5lhtFo2YZy8Cco3F_81NGfmRv04p0A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/user/findById/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"user",
+						"findById",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/user/remove/4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzA2NTQxNjUsImlzcyI6InRoZV9ib3NzX3JpY2tzIiwic3ViIjoiMiIsImV4cCI6MTYzMDY1Nzc2NX0.45hjzueGpAQ4oGar0H9BwWdv0I5g9cO05FaoOawjaKWozAgXBDrRFdxa5lhtFo2YZy8Cco3F_81NGfmRv04p0A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/user/remove/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"user",
+						"remove",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/product/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzA2NTQxNjUsImlzcyI6InRoZV9ib3NzX3JpY2tzIiwic3ViIjoiMiIsImV4cCI6MTYzMDY1Nzc2NX0.45hjzueGpAQ4oGar0H9BwWdv0I5g9cO05FaoOawjaKWozAgXBDrRFdxa5lhtFo2YZy8Cco3F_81NGfmRv04p0A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"pilas\",\r\n    \"price\":\"25.50\",\r\n\t\"brand\":\"Motorola\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/product/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/product/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzA2NTQxNjUsImlzcyI6InRoZV9ib3NzX3JpY2tzIiwic3ViIjoiMiIsImV4cCI6MTYzMDY1Nzc2NX0.45hjzueGpAQ4oGar0H9BwWdv0I5g9cO05FaoOawjaKWozAgXBDrRFdxa5lhtFo2YZy8Cco3F_81NGfmRv04p0A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Celular\",\r\n    \"price\":\"87.80\",\r\n\t\"brand\":\"Samsung\",\r\n    \"productId\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/product/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"product",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/product/findById/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzA2NTQxNjUsImlzcyI6InRoZV9ib3NzX3JpY2tzIiwic3ViIjoiMiIsImV4cCI6MTYzMDY1Nzc2NX0.45hjzueGpAQ4oGar0H9BwWdv0I5g9cO05FaoOawjaKWozAgXBDrRFdxa5lhtFo2YZy8Cco3F_81NGfmRv04p0A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/product/findById/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"product",
+						"findById",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/product/remove/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2MzA2NTQxNjUsImlzcyI6InRoZV9ib3NzX3JpY2tzIiwic3ViIjoiMiIsImV4cCI6MTYzMDY1Nzc2NX0.45hjzueGpAQ4oGar0H9BwWdv0I5g9cO05FaoOawjaKWozAgXBDrRFdxa5lhtFo2YZy8Cco3F_81NGfmRv04p0A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/product/remove/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"product",
+						"remove",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
