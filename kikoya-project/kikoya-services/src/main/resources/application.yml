@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: kikoya-services
+  datasource:
+    url: jdbc:postgresql://10.10.20.65:5432/kikoyo_db
+    username: kikoyo_user
+    password: k!k0y0_t3st
+server:
+  port: 8088
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    healthcheck:
+      enabled: true
+  instance:
+    preferIpAddress: true
+   
+logging:
+  level:
+    org.springframework: ALL
+    com.mx.kikoya.services : ALL
+    
+
